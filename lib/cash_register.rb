@@ -17,16 +17,26 @@ class CashRegister
  end
 
  def apply_discount
+   # binding.prylearn
+
    if self.discount <= 0
-     return "There is no discount to apply."
-   else
-     percentage = self.discount * 0.01
-     self.total -= (self.total * percentage).to_i
-     return "After the discount, the total comes to $#{self.total}."
-   end
+   return "There is no discount to apply."
+ else
+   percentage = self.discount * 0.01
+      self.total -= (self.total * percentage).to_i
+      return "After the discount, the total comes to $#{self.total}."
+
+ end
+
  end
 
  def void_last_transaction
-   self.total -= self.last_transaction
+   self.total -= self.last_transaction  
  end
+
+
+
+
+
+
 end
